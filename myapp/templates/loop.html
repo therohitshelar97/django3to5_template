@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Loop</title>
+</head>
+<body>
+    <h1>Here we are learning Django template loops</h1>
+    <!-- {% if value1 %}
+
+      {% for i in value1 %}
+      <h1>{{i}}</h1>
+      {% endfor %}
+    {% else %}
+       <h1>Not Data</h1>
+    {% endif %} -->
+
+    {% for i in value1 %}
+      <h1>{{i}}</h1>
+    {% empty %}
+    <h1>No data</h1>
+      {% endfor %}
+
+      {% for i in value2 %}
+         <h1>{{i}}</h1>
+      {% endfor %}
+
+      <h1>{{value2.name}}, {{value2.age}}, {{value2.city}}</h1>
+</body>
+</html>

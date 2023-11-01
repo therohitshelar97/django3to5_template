@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Conditions</title>
+</head>
+<body>
+    <h1>Here we are learning django template condition</h1>
+    {% if value == 22 %}
+    <h1>Yes This condition  is True</h1>
+
+    {% else %}
+       <h1>False</h1>
+    {% endif %}
+
+    {% if 50 > value %}
+    <h1>Yes, 50 is greater than {{value}} </h1>
+
+    {% else %}
+    <h1>No, 50 is not greater than {{value}} </h1>
+    {% endif %}
+
+    {% if 22 >= value %}
+    <h1>Yes, 22 is  equal to {{value}} </h1>
+
+    {% else %}
+    <h1>No, 22 is {{value}} </h1>
+    {% endif %}
+
+    {% if value > value1 and value > value2  %}
+    <h1 style="color:green">{{value}} is greater than {{value1}} and {{value2}}</h1>
+    {% elif value1 > value and value1 > value2 %}
+    <h1 style="color:green">{{value1}} is greater than {{value}} and {{value2}}</h1>
+    {% else %}
+    <h1 style="color:green">{{value2}} is greater than {{value1}} and {{value}}</h1>
+    {% endif %}
+
+
+    {% if 'abc' in list1 %}
+    {{list1}}
+    <h1>Yes, ABC in {{list1}}</h1>
+    {% else %}
+    <h1>No, ABC not in {{list1}}</h1>
+    {% endif %}
+
+
+{% comment %}
+
+    {% if list1 %}
+      <h1>Yes We have data in list1 {{list1}}</h1>
+      {{list1}}
+     {% else %}
+      <h1>Not Data In list1 {{list1}}</h1>
+    {% endif %}
+{% endcomment %}
+
+{% if True %}
+    <h1>True</h1>
+    {% else %}
+    <h1>False</h1>
+{% endif %}
+
+
+{% if True == bool %}
+    <h1>True</h1>
+    {% else %}
+    <h1>False</h1>
+{% endif %}
+</body>
+</html>
