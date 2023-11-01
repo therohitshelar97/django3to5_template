@@ -6,9 +6,11 @@ from .forms import FormForm
 
 def Htmlform(request):
     if request.method == "GET":
+        print(request.GET)
         name1 = request.GET.get('name')
         age1 = request.GET.get('age')
-        data = form_table.objects.create(name=name1,age=age1)
+        city1 = request.GET.get('city')
+        data = form_table.objects.create(name=name1,age=age1,city=city1)
         data.save()
     return render (request,'htmlform.html')
 
